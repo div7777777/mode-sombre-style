@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body class="body">
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+}
+/* changeur de thème */
+.body {
+    padding: 50px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+  }
+  
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
+  .fig{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: row;
+      height: 85px;
+      width: 250px;
+      border-radius: 50px;
+      background: darkblue;
+      border: 10px solid  darkorange;
+  }
+
+  .btn{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 85px;
+      width: 95px;
+      background: linear-gradient(90deg, 
+      black 50%, white 50%);
+      border-radius: 50%;
+      border: 4px solid whitesmoke;
+      animation: 7s infinite btn;
+  }
+  @keyframes btn{
+      50%{
+          background: linear-gradient(90deg, white 50%, 
+          black 50%);
+      }
+  }
+
+  .items{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 7px solid darkorang;
+      height: 85px;
+      width: 250px;
+      border-radius: 50px;
+  }
+ .moon{
+     animation: 7s infinite moon;
+ }
+ @keyframes moon{
+     50%{
+         transform: translateX(-112px);
+     }
+ }
+ .sun{
+     animation: 7s infinite sun;
+ }
+ @keyframes sun{
+     50%{
+         transform: translateX(100px);
+     }
+ }
+    </style>
+
+       <!-- changeur de thème -->
+    <div class="fig">
+        <button class="btn" onclick="myFunction()"></button>
+        <!-- moon-suns -->
+            <div class="items">
+                <div class="sun">
+                    <img src="https://img.icons8.com/ios-glyphs/70/ff8c00/sun--v1.png"/></div>
+                
+                <div class="moon">
+                    <img src="https://img.icons8.com/external-bearicons-glyph-bearicons/64/ff8c00/
+                    external-moon-halloween-bearicons-glyph-bearicons.png"/></div>
+            </div>
+    </div>
+    <script>
+        // changeur de thème
+function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+ }
+    </script>
+
+
+      <script src="code.js"></script>
+</body>
+</html>
